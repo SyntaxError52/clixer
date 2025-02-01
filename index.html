@@ -146,7 +146,7 @@
 
     
     function update() {
-      $('#counter').html(`$${money}, $${mps}/second`);
+      $('#counter').html(`$${money.toLocaleString('en-US');}, $${mps}/second`);
       if (navigator.cookieEnabled) {
           setCookie('money', money, 365 * 5);
           setCookie('mps', mps, 365 * 5);
