@@ -6,16 +6,20 @@
   <title>Clixer</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
   <style>
-      body {
-          background-color: black;
+      html {
+        height: --webkit-fill-availible;
+        overflow-x: hidden;
+      } body {
+          background-color: #222;
           color: white;
-          font-family: 'Courier New', Courier, monospace;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           font-weight: 600;
           margin: 0;
       }
       .title {
           font-size: 1.3rem;
           padding: 5px;
+          background-color: black;
       }
       .total-area {
           display: flex;
@@ -37,7 +41,7 @@
           text-align: center;
           font-size: 5rem;
           margin-top: 20%;
-          font-family: 'Courier New', Courier, monospace;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           font-weight: 600;
           color: white;
           background: #222;
@@ -47,11 +51,11 @@
           transition: 300ms;
       }
       #main-btn:hover {
-          scale: 115%;
+          scale: 105%;
           filter: brightness(145%);
       }
       #main-btn:active {
-          scale: 145%;
+          scale: 115%;
           filter: brightness(400%);
       }
       #counter {
@@ -65,7 +69,7 @@
         border-radius: 1rem;
         cursor: pointer;
         margin: 4px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 600;
       } .true-shop {
         display: flex;
@@ -73,13 +77,25 @@
         justify-content: center; 
         align-items: center;
       }
+      @media screen and (max-width: 1290px) {
+        .total-area {
+            flex-direction: column;
+        }  .click-area, .shop {
+          width: 100%;
+          height: 45vh;
+        } #main-btn {
+            font-size: 3rem;
+        } .item {
+            font-size: 1rem;
+        }
+       }
   </style>
 </head>
 <body>
   <div class="title">Clixer 1.0 -- SyntaxError52</div>
   <div class="total-area">
       <div class="click-area">
-          <button id="main-btn">Bake Cookie</button><br><br><br>
+          <button id="main-btn">Make Money</button><br><br><br>
           <span id="counter">$0, $0/second</span>
       </div>
       <div class="shop">
