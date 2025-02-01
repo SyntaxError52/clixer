@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clixer</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <style>
+      body {
+          background-color: black;
+          color: white;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: 600;
+          margin: 0;
+      }
+      .title {
+          font-size: 1.3rem;
+          padding: 5px;
+      }
+      .total-area {
+          display: flex;
+      }
+      .click-area, .shop {
+          width: 50%;
+          padding: 5px;
+          height: 95.3vh;
+      }
+      .click-area {
+          background: #333;
+          text-align: center;
+      }
+      .shop {
+          background: #222;
+          justify-content: center;
+      }
+      #main-btn {
+          text-align: center;
+          font-size: 5rem;
+          margin-top: 20%;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: 600;
+          color: white;
+          background: #222;
+          padding: 1rem;
+          border: 5px solid #3b3b3b;
+          border-radius: 3rem;
+          transition: 300ms;
+      }
+      #main-btn:hover {
+          scale: 115%;
+          filter: brightness(145%);
+      }
+      #main-btn:active {
+          scale: 145%;
+          filter: brightness(400%);
+      }
+      #counter {
+        font-size: 1.6rem;
+      } .item {    
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        background: #444;
+        color: white;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+        margin: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+      } .true-shop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+      }
+      @media screen and (max-width: 1290px) {
+        .total-area {
+            flex-direction: column;
+        }
+       }
+  </style>
+</head>
+<body>
+  <div class="title">Clixer 1.0 -- SyntaxError52</div>
+  <div class="total-area">
+      <div class="click-area">
+          <button id="main-btn">Bake Cookie</button><br><br><br>
+          <span id="counter">$0, $0/second</span>
+      </div>
+      <div class="shop">
+          <h1 align="center">Shop</h1>
+          <div class="true-shop">
+            <button class="item" align="center" onclick="upgrade(100, 1)">Fry Cook // -$100 Income: $1</button>
+            <button class="item" align="center" onclick="upgrade(1000, 15)">Plumber // -$1000 Income: $15</button>
+            <button class="item" align="center" onclick="upgrade(10000, 200)">Coder // -$10,000 Income: $200</button>
+            <button class="item" align="center" onclick="upgrade(100000, 2500)">Doctor // -$100,000 Income: $2500</button>
+            <button class="item" align="center" onclick="upgrade(1000000, 30000)">Influencer // -$1,000,000 Income: $30,000</button>
+            <button class="item" align="center" onclick="upgrade(10000000, 350000)">President // -$10,000,000 Income: $350,000</button>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      var money = 0;
+      var mps = 0;
+
+      function update() {
+          $('#counter').html(`$${money}, $${mps}/second`);
+      }
+
+      document.getElementById("main-btn").addEventListener("click", function () {
+          money++;
+          update();
+      });
+
+      function upgrade(cost, gift){
+        if (money >= cost) {
+            money -= cost;
+            mps += gift;
+        } else {
+            alert('too broke lil bro');
+        }; update();
+      };
+
+      setInterval(() => {money+=mps; update();}, 1000);
+
+  </script>
+</body>
+</html>
