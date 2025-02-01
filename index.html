@@ -6,61 +6,61 @@
   <title>Clixer</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
   <style>
-      html {
-        height: --webkit-fill-availible;
-        overflow-x: hidden;
-      } body {
-          background-color: #222;
-          color: white;
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          font-weight: 600;
-          margin: 0;
-      }
-      .title {
-          font-size: 1.3rem;
-          padding: 5px;
-          background-color: black;
-      }
-      .total-area {
-          display: flex;
-      }
-      .click-area, .shop {
-          width: 50%;
-          padding: 5px;
-          height: 95.3vh;
-      }
-      .click-area {
-          background: #333;
-          text-align: center;
-      }
-      .shop {
-          background: #222;
-          justify-content: center;
-      }
-      #main-btn {
-          text-align: center;
-          font-size: 5rem;
-          margin-top: 20%;
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          font-weight: 600;
-          color: white;
-          background: #222;
-          padding: 1rem;
-          border: 5px solid #3b3b3b;
-          border-radius: 3rem;
-          transition: 300ms;
-      }
-      #main-btn:hover {
-          scale: 105%;
-          filter: brightness(145%);
-      }
-      #main-btn:active {
-          scale: 115%;
-          filter: brightness(400%);
-      }
-      #counter {
+    html {
+      height: --webkit-fill-availible;
+      overflow-x: hidden;
+    } body {
+        background-color: #222;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        margin: 0;
+    }
+    .title {
+        font-size: 1.3rem;
+        padding: 5px;
+        background-color: black;
+    }
+    .total-area {
+        display: flex;
+    }
+    .click-area, .shop {
+        width: 50%;
+        padding: 5px;
+        height: 95.3vh;
+    }
+    .click-area {
+        background: #333;
+        text-align: center;
+    }
+    .shop {
+        background: #222;
+        justify-content: center;
+    }
+    #main-btn {
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 20%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        color: white;
+        background: #222;
+        padding: 1rem;
+        border: 5px solid #3b3b3b;
+        border-radius: 3rem;
+        transition: 300ms;
+    }
+    #main-btn:hover {
+        scale: 105%;
+        filter: brightness(145%);
+    }
+    #main-btn:active {
+        scale: 115%;
+        filter: brightness(400%);
+    }
+    #counter {
         font-size: 1.6rem;
-      } .item {    
+    } .item {    
         font-size: 1.2rem;
         padding: 10px 20px;
         background: #444;
@@ -71,70 +71,103 @@
         margin: 4px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 600;
-      } .true-shop {
+    } .true-shop {
         display: flex;
         flex-direction: column;
         justify-content: center; 
         align-items: center;
-      }
-      @media screen and (max-width: 1290px) {
+    }
+    @media screen and (max-width: 1290px) {
         .total-area {
             flex-direction: column;
         }  .click-area, .shop {
-          width: 100%;
-          height: 45vh;
+            width: 100%;
+            height: 45vh;
         } #main-btn {
             font-size: 3rem;
         } .item {
             font-size: 1rem;
         }
-       }
+    }
   </style>
 </head>
-<body>
-  <div class="title">Clixer 1.0 -- SyntaxError52</div>
-  <div class="total-area">
-      <div class="click-area">
-          <button id="main-btn">Make Money</button><br><br><br>
-          <span id="counter">$0, $0/second</span>
-      </div>
-      <div class="shop">
-          <h1 align="center">Shop</h1>
-          <div class="true-shop">
+    <body>
+    <div class="title">Clixer 1.0 -- SyntaxError52</div>
+    <div class="total-area">
+        <div class="click-area">
+            <button id="main-btn">Make Money</button><br><br><br>
+            <span id="counter">$0, $0/second</span>
+        </div>
+        <div class="shop">
+            <h1 align="center">Shop</h1>
+            <div class="true-shop">
             <button class="item" align="center" onclick="upgrade(100, 1)">Fry Cook // -$100 Income: $1</button>
             <button class="item" align="center" onclick="upgrade(1000, 15)">Plumber // -$1000 Income: $15</button>
             <button class="item" align="center" onclick="upgrade(10000, 200)">Coder // -$10,000 Income: $200</button>
             <button class="item" align="center" onclick="upgrade(100000, 2500)">Doctor // -$100,000 Income: $2500</button>
             <button class="item" align="center" onclick="upgrade(1000000, 30000)">Influencer // -$1,000,000 Income: $30,000</button>
             <button class="item" align="center" onclick="upgrade(10000000, 350000)">President // -$10,000,000 Income: $350,000</button>
-          </div>
-      </div>
-  </div>
+            </div>
+        </div>
+    </div>
 
-  <script>
-      var money = 0;
-      var mps = 0;
+    <script>
+    var money = 0;
+    var mps = 0;
 
-      function update() {
-          $('#counter').html(`$${money}, $${mps}/second`);
+    // cookies
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookiesArray = document.cookie.split(';');
+            for (let cookie of cookiesArray) {
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) {
+                    return parseInt(cookie.substring(nameEQ.length, cookie.length)) || 0;
+            }
+        }
+        return 0;
+    }
+
+    
+    if (navigator.cookieEnabled) {
+        money = getCookie('money');
+        mps = getCookie('mps');
+    }
+
+    
+    function update() {
+      $('#counter').html(`$${money}, $${mps}/second`);
+      if (navigator.cookieEnabled) {
+          setCookie('money', money, 365 * 5);
+          setCookie('mps', mps, 365 * 5);
       }
+    }
 
-      document.getElementById("main-btn").addEventListener("click", function () {
-          money++;
-          update();
-      });
+    document.getElementById("main-btn").addEventListener("click", function () {
+        money++;
+        update();
+    });
 
-      function upgrade(cost, gift){
-        if (money >= cost) {
-            money -= cost;
-            mps += gift;
-        } else {
-            alert('too broke lil bro');
-        }; update();
-      };
+    function upgrade(cost, gift){
+      if (money >= cost) {
+          money -= cost;
+          mps += gift;
+      } else {
+          alert('too broke lil bro');
+      }; update();
+    };
 
-      setInterval(() => {money+=mps; update();}, 1000);
-
-  </script>
+    setInterval(() => {money+=mps; update();}, 1000);
+    </script>
 </body>
 </html>
